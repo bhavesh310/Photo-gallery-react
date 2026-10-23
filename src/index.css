@@ -1,0 +1,28 @@
+@import "tailwindcss";
+:root{--bg:#f4f3ff;--fg:#14122b;--mut:#6b6890;--card:rgba(255,255,255,.65);--line:rgba(90,80,170,.16);--a:#6d5efc;--b:#ff5fa2;--c:#22d3ee}
+@media (prefers-color-scheme:dark){:root{--bg:#07061a;--fg:#f1efff;--mut:#9c98c8;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.12)}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+.t-mut{color:var(--mut)}
+.blob{position:fixed;z-index:-1;border-radius:50%;filter:blur(90px);opacity:.4;animation:float 18s ease-in-out infinite;pointer-events:none}
+@keyframes float{50%{transform:translate(70px,-50px) scale(1.2)}}
+.glass{background:var(--card);border:1px solid var(--line);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+.grad-text{background:linear-gradient(90deg,var(--a),var(--b),var(--c),var(--a));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 7s linear infinite}
+@keyframes flow{to{background-position:-300% 0}}
+@keyframes rise{from{opacity:0;transform:translateY(30px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.5)}100%{transform:scale(1)}}
+@keyframes ping{to{transform:scale(2.2);opacity:0}}
+@keyframes shimmer{to{background-position:-200% 0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.animate-rise{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
+.animate-pop{animation:pop .4s ease-out}
+.ring-ping{animation:ping .6s ease-out forwards}
+.card3d{transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s}
+.card3d:hover{transform:translateY(-8px) scale(1.015);box-shadow:0 30px 60px -20px rgba(109,94,252,.5)}
+.skeleton{background:linear-gradient(90deg,#8884 25%,#fff3 50%,#8884 75%);background-size:200% 100%;animation:shimmer 1.4s linear infinite}
+.orbit{width:60px;height:60px;border-radius:50%;border:3px solid transparent;border-top-color:var(--a);border-right-color:var(--b);animation:spin 1s linear infinite;position:relative}
+.orbit::after{content:"";position:absolute;inset:6px;border-radius:50%;border:3px solid transparent;border-bottom-color:var(--c);animation:spin .7s linear infinite reverse}
+.search{transition:box-shadow .3s}
+.search:focus-within{box-shadow:0 0 0 4px rgba(109,94,252,.25),0 0 40px rgba(255,95,162,.3)}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
