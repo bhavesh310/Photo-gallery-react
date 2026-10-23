@@ -16,7 +16,7 @@
 
 **A polished, responsive photo gallery with glassmorphism UI, real-time search, and persistent favourites, built on core React fundamentals.**
 
-[Features](#-features) · [Architecture](#-architecture) · [Getting Started](#-getting-started) · [Engineering Highlights](#-engineering-highlights) · [FAQ](#-faq)
+[Features](#-features) · [Architecture](#-architecture) · [Getting Started](#-getting-started) · [FAQ](#-faq)
 
 <br>
 
