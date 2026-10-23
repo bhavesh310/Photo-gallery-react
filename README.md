@@ -20,7 +20,11 @@
 
 <br>
 
-![Photo Gallery Preview](https://photo-gallery-card-react.netlify.app/)
+## 🌐 Live Demo
+
+🚀 **Live Application:** [https://photo-gallery-card-react.netlify.app](https://photo-gallery-card-react.netlify.app/)
+
+💻 **Source Code:** [https://github.com/bhavesh310/Photo-gallery-react](https://github.com/bhavesh310/Photo-gallery-react)
 
 </div>
 
